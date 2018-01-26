@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <label>Big Contact</label>
+    <pluralLabel>Big Contacts</pluralLabel>
+
+    <fields>
+        <fullName>Account__c</fullName>
+        <label>User Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Big_Contact_Account</relationshipName>
+        <required>true</required>
+        <type>Lookup</type>
+    </fields>
+
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <label>First Name</label>
+        <length>40</length>
+        <required>true</required>
+        <type>Text</type>
+    </fields>
+
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <label>Last Name</label>
+        <length>80</length>
+        <required>true</required>
+        <type>Text</type>
+    </fields>
+
+    <fields>
+        <fullName>Primary_Email__c</fullName>
+        <label>Primary Email</label>
+        <required>false</required>
+        <type>Text</type>
+        <length>80</length>
+    </fields>
+
+    <fields>
+        <fullName>Primary_Phone__c</fullName>
+        <label>Primary Phone</label>
+        <required>false</required>
+        <type>Text</type>
+        <length>40</length>
+    </fields>
+
+
+    <fields>
+        <fullName>Fax__c</fullName>
+        <label>Fax</label>
+        <required>false</required>
+        <type>Text</type>
+        <length>40</length>
+    </fields>
+
+
+    <indexes>
+        <fullName>BigContactIndex</fullName>
+        <label>Big Contact Index</label>
+        <fields>
+            <name>Account__c</name>
+            <sortDirection>DESC</sortDirection>
+        </fields>
+        <fields>
+            <name>First_Name__c</name>
+            <sortDirection>DESC</sortDirection>
+        </fields>
+    </indexes>
+
+</CustomObject>
+
